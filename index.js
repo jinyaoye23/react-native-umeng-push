@@ -46,15 +46,22 @@ export default class RNUmengPush {
     }
 
     /**
+     * 初始化友盟SDK
+     */
+    static initSDK() {
+        UmengPush.initUMengSDK()
+    }
+
+    /**
      * initPush 
      */
     static initPush() {
         UmengPush.initPush()
     }
 
-	/**
-	 *  销毁SDK，并且释放资源
-	 */
+    /**
+     *  销毁SDK，并且释放资源
+     */
     static destroy() {
         UmengPush.destroy();
     }

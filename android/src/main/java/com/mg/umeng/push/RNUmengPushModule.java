@@ -5,6 +5,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
@@ -51,6 +52,19 @@ public class RNUmengPushModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void initPush() {
         ininPushAgent(getReactApplicationContext(), pushInfo);
+    }
+
+    /**
+     * 初始化友盟SDK
+     */
+    @ReactMethod
+    public void initUMengSDK() {
+        Intent intent = new Intent();
+        //设置Action
+        intent.setAction("com.umeng.private_allow");
+        //Intent携带数据
+        intent.putExtra("message","这里是广播消息");
+        mRAC.sendBroadcast(intent);
     }
 
     /**

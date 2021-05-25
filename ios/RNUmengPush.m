@@ -80,6 +80,15 @@ RCT_EXPORT_MODULE()
   [self.bridge.eventDispatcher sendAppEventWithName:@"clickRemoteNotification"
                                                body:obj];
 }
+
+/**
+ *  
+ */
+
+RCT_EXPORT_METHOD(initUMengSDK) {
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"PRIVATE_ALLOW" object:nil];
+}
+
 #pragma mark - 收到通知回调
 
 /**
@@ -268,6 +277,7 @@ RCT_EXPORT_METHOD(openNotificationSetting){
 // 返回deviceToken
 RCT_EXPORT_METHOD(clientId:(RCTResponseSenderBlock)callback) {
   NSString *deviceToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"kUMessageUserDefaultKeyForParams"];
+    NSString *deviceToken2 = [[NSUserDefaults standardUserDefaults] valueForKey:@"kUMessageUserDefaultKeyForDeviceToken"];
   if (deviceToken.length > 0) {
       callback(@[deviceToken]);
   } else {
