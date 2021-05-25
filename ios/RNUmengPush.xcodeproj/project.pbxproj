@@ -206,8 +206,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../../ios/Pods/UMCPush",
-					"$(SRCROOT)/../../../ios/Pods/UMCCommon",
+					"$(SRCROOT)/../../../ios/Pods/UMPush",
+					"$(SRCROOT)/../../../ios/Pods/UMCommon",
 					"$(SRCROOT)/../../../ios/Pods/UMCSecurityPlugins",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -228,8 +228,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(SRCROOT)/../../../ios/Pods/UMCPush",
-					"$(SRCROOT)/../../../ios/Pods/UMCCommon",
+					"$(SRCROOT)/../../../ios/Pods/UMPush",
+					"$(SRCROOT)/../../../ios/Pods/UMCommon",
 					"$(SRCROOT)/../../../ios/Pods/UMCSecurityPlugins",
 				);
 				HEADER_SEARCH_PATHS = (

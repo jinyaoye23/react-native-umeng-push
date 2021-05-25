@@ -45,6 +45,10 @@ export default class RNUmengPush {
         UmengPush.clearAllNotifications()
     }
 
+    static initUMengSDK() {
+        UmengPush.initUMengSDK()
+    }
+
     /**
      * 初始化友盟SDK
      */

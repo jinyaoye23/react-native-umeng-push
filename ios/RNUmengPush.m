@@ -98,6 +98,10 @@ RCT_EXPORT_METHOD(initPush) {
   [[NSNotificationCenter defaultCenter]postNotificationName:@"GT_INIT" object:nil];
 }
 
+RCT_EXPORT_METHOD(initUMengSDK) {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PRIVATE_ALLOW" object:nil];
+}
+
 
 //  /**未知错误*/
 //  kUMessageErrorUnknown = 0,
@@ -277,7 +281,6 @@ RCT_EXPORT_METHOD(openNotificationSetting){
 // 返回deviceToken
 RCT_EXPORT_METHOD(clientId:(RCTResponseSenderBlock)callback) {
   NSString *deviceToken = [[NSUserDefaults standardUserDefaults] valueForKey:@"kUMessageUserDefaultKeyForParams"];
-    NSString *deviceToken2 = [[NSUserDefaults standardUserDefaults] valueForKey:@"kUMessageUserDefaultKeyForDeviceToken"];
   if (deviceToken.length > 0) {
       callback(@[deviceToken]);
   } else {
